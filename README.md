@@ -1,2 +1,3 @@
 # Midas
-Programa de Levantamento e Organização de financas
+
+Programa de Levantamento e Organização de financas pessoais
