@@ -1,16 +1,19 @@
 import flet as ft
+from views import home
 
 
 def main(page: ft.Page):
-    page.window.width = 414
-    page.window.height = 896
+    page.window.width = 1366
+    page.window.height = 768
+    page.window.maximized = True
+    page.bgcolor = "#2c2c2c"
     page.adaptive = True
-    page.title = "Gamefy"
+    page.title = "Midas"
 
     def route_change(route):
         page.views.clear()
         if page.route == "/home":
-            pass
+            page.views.append(home.home_page(page))
         
         page.update()
         
