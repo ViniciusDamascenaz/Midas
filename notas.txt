@@ -1,0 +1,54 @@
+cores: 
+
+branco: #f8f7f2
+amarelin: #f7d78a
+azulzin: #a2a6fd
+
+
+
+etapas:
+
+Tela 1 - Boas-Vindas
+Título: Bem-vindo ao Midas!
+Texto: Transforme suas finanças em ouro. Vamos te ajudar a gerenciar seu dinheiro de forma simples e eficiente.
+
+Botão: Começar
+
+
+
+
+Tela 2 - Objetivo do Usuário
+Título: Qual o seu objetivo financeiro?
+Texto: Para personalizar sua experiência, queremos entender suas metas. Escolha uma opção:
+
+Opções:
+
+Quero economizar
+Quero investir
+Quero controlar meus gastos
+Quero quitar dívidas
+Botão: Próximo
+
+
+
+
+Tela 3 - Coleta de Dados Básicos
+Título: Personalize sua experiência
+Texto: Para te oferecer insights personalizados, precisamos de algumas informações.
+
+Campos:
+
+Qual sua renda mensal?
+Quanto você quer economizar por mês?
+Seus principais gastos são com: [Alimentação, Moradia, Transporte, Lazer, Outros]
+Botão: Avançar
+
+
+
+
+
+Tela 4 - Finalização
+Título: Tudo pronto!
+Texto: Agora que já conhecemos um pouco sobre você, vamos te ajudar a transformar sua vida financeira.
+
+Botão: Ir para o painel
