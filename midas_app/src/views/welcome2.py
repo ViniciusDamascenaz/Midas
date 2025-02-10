@@ -44,20 +44,24 @@ def welcome_page2(page: Page):
 
                             Column([
                                 Row([
-                                    Container(width=page.window.width/10),
-                                    economia
+                                    Container(width=page.window.width/12),
+                                    economia,
+                                    Text("💵", size=30)
                                 ]),
                                 Row([
-                                    Container(width=page.window.width/10),
-                                    investir
+                                    Container(width=page.window.width/12),
+                                    investir,
+                                    Text("📊", size=30)
                                 ]),
                                 Row([
-                                    Container(width=page.window.width/10),
-                                    gastos
+                                    Container(width=page.window.width/12),
+                                    gastos,
+                                    Text("💸", size=30)
                                 ]),
                                 Row([
-                                    Container(width=page.window.width/10),
-                                    dividas
+                                    Container(width=page.window.width/12),
+                                    dividas,
+                                    Text("📝", size=30)
                                 ]),
 
                             ], horizontal_alignment=CrossAxisAlignment.CENTER, width=page.window.width/2, height=page.window.height),

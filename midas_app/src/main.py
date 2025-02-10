@@ -2,6 +2,7 @@ import flet as ft
 from views import home
 from views import welcome
 from views import welcome2
+from views import welcome3
 
 
 def main(page: ft.Page):
@@ -20,11 +21,13 @@ def main(page: ft.Page):
             page.views.append(welcome.welcome_page1(page))
         elif page.route == "/welcome2":
             page.views.append(welcome2.welcome_page2(page))
+        elif page.route == "/welcome3":
+            page.views.append(welcome3.welcome_page3(page))
         
         page.update()
         
 
     page.on_route_change = route_change
-    page.go("/welcome1")
+    page.go("/welcome3")
     page.update()
 ft.app(target=main, assets_dir="./")
