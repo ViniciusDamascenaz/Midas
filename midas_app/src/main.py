@@ -3,6 +3,7 @@ from views import home
 from views import welcome
 from views import welcome2
 from views import welcome3
+from system import dados
 
 
 def main(page: ft.Page):
@@ -28,6 +29,9 @@ def main(page: ft.Page):
         
 
     page.on_route_change = route_change
-    page.go("/welcome3")
+    if dados.Usuario().new_user() == True:
+        page.go("/welcome1")
+    else:
+        page.go("/home")
     page.update()
 ft.app(target=main, assets_dir="./")

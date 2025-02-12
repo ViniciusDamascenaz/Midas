@@ -5,7 +5,7 @@ from system import dados
 def welcome_page2(page: Page):
 
     economia = Checkbox(label="Quero Economizar", value=False, label_style=TextStyle(size=30, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=100)
-    investir = Checkbox(label="Quero Invertir", value=False, label_style=TextStyle(size=30, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=100)
+    investir = Checkbox(label="Quero Investir", value=False, label_style=TextStyle(size=30, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=100)
     gastos = Checkbox(label="Quero controlar meus gastos", value=False, label_style=TextStyle(size=30, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=100)  
     dividas = Checkbox(label="Quero quitar dívidas", value=False, label_style=TextStyle(size=30, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=100)
 
@@ -30,7 +30,7 @@ def welcome_page2(page: Page):
                 Container(
                     Column([
                         ProgressBar(0.2,bar_height=20, color="#a2a6fd", height=10),
-                        Container(height=page.window.height/7),
+                        Container(height=page.window.height/9),
                         Row([
                             Column([
                                 Text("Qual o seu objetivo financeiro?", size=65, color="black", text_align=TextAlign.CENTER, weight=FontWeight.BOLD),
@@ -43,21 +43,25 @@ def welcome_page2(page: Page):
                             ], horizontal_alignment=CrossAxisAlignment.CENTER, width=page.window.width/2, height=page.window.height),
 
                             Column([
+                                Container(height=page.window.height/40),
                                 Row([
                                     Container(width=page.window.width/12),
                                     economia,
                                     Text("💵", size=30)
                                 ]),
+                                Container(height=page.window.height/40),
                                 Row([
                                     Container(width=page.window.width/12),
                                     investir,
                                     Text("📊", size=30)
                                 ]),
+                                Container(height=page.window.height/40),
                                 Row([
                                     Container(width=page.window.width/12),
                                     gastos,
                                     Text("💸", size=30)
                                 ]),
+                                Container(height=page.window.height/40),
                                 Row([
                                     Container(width=page.window.width/12),
                                     dividas,

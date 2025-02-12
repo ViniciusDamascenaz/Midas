@@ -1,6 +1,6 @@
 {
     "nome": "",
-    "email": "",
+    "email": "\\sda",
     "objetivo": [],
     "renda": "",
     "saldo_atual": 0.0,
@@ -9,5 +9,7 @@
     "receitas": {},
     "orçamento": {},
     "investimentos": {},
-    "metas_financeiras": {}
+    "metas_financeiras": {},
+    "ia": "False",
+    "new_user": "True"
 }
