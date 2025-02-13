@@ -1,8 +1,8 @@
 {
-    "nome": "",
-    "email": "\\sda",
+    "nome": "matheus",
+    "email": "vinicius",
     "objetivo": [],
-    "renda": "",
+    "renda": "20000",
     "saldo_atual": 0.0,
     "cartoes": {},
     "gastos": {},
@@ -10,6 +10,6 @@
     "orçamento": {},
     "investimentos": {},
     "metas_financeiras": {},
-    "ia": "False",
+    "ia": "True",
     "new_user": "True"
 }

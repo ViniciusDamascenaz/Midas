@@ -30,7 +30,7 @@ def main(page: ft.Page):
 
     page.on_route_change = route_change
     if dados.Usuario().new_user() == True:
-        page.go("/welcome1")
+        page.go("/welcome3")
     else:
         page.go("/home")
     page.update()

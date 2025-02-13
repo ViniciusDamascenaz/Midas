@@ -3,41 +3,65 @@ import json
 from system import dados
 
 def welcome_page3(page: Page):
-    
 
     nome = TextField(width=page.window.width/2 - 150, border_radius=60, text_style=TextStyle(color="black", size=20))
     email = TextField(width=page.window.width/2 - 150, border_radius=60, text_style=TextStyle(color="black", size=20))
     renda = TextField(width=page.window.width/2 - 150, border_radius=60, text_style=TextStyle(color="black", size=20),prefix_text="R$")
     ia = Checkbox(label="Sim, quero insights personalizados!", value=False, label_style=TextStyle(size=18, color="black"), overlay_color="#f7d78a", active_color="#f7d78a", shape=RoundedRectangleBorder(radius=5), height=35)
 
+    def aviso_close(e):
+        page.close(aviso)
+
+    def avisorenda_close(e):
+        page.close(aviso_renda)
+    
+    aviso = AlertDialog(
+        modal=True,
+        title=Text("Aviso", color="black"),
+        content=Text("Preencha todos os campos.", color="black"),
+        actions=[
+            TextButton("Ok", on_click=aviso_close, style=ButtonStyle(color="black", side=BorderSide(2,"black")))],
+        bgcolor="#a2a6fd",
+    )
+
+    aviso_renda = AlertDialog(
+        modal=True,
+        title=Text("Aviso", color="black"),
+        content=Text("A renda deve conter somente numeros.", color="black"),
+        actions=[
+            TextButton("Ok", on_click=avisorenda_close, style=ButtonStyle(color="black", side=BorderSide(2,"black")))],
+        bgcolor="#a2a6fd",
+    )
 
     def prox_page(e):
-        print("foda")
         user = dados.Usuario()
 
         if nome.value == "":
-            page.snack_bar = SnackBar(content=Text("Preencha todos os campos."),bgcolor="red",action="Ok!",duration=3000)
-            page.snack_bar.open = True
+            page.open(aviso)
             page.update()
 
         elif email.value == "":
-            page.snack_bar = SnackBar(content=Text("Preencha todos os campos."),bgcolor="red",action="Ok!",duration=3000)
-            page.snack_bar.open = True
+            page.open(aviso)
             page.update()
 
         elif renda.value == "":
-            page.snack_bar = SnackBar(content=Text("Preencha todos os campos."),bgcolor="red",action="Ok!",duration=3000)
-            page.snack_bar.open = True
+            page.open(aviso)
             page.update()
         else:
-            user.adiciona_obj("renda", renda.value)
-            user.adiciona_obj("nome", nome.value)
-            user.adiciona_obj("email", email.value)
-            if ia.value == True:
-                user.adiciona_obj("ia", "True")
-            else:
-                user.adiciona_obj("ia", "False")
-            page.go("/welcome1")
+            try:
+                int(renda.value)
+                user.adiciona_obj("renda", renda.value)
+                user.adiciona_obj("nome", nome.value)
+                user.adiciona_obj("email", email.value)
+                if ia.value == True:
+                    user.adiciona_obj("ia", "True")
+                else:
+                    user.adiciona_obj("ia", "False")
+                page.go("/welcome1")
+
+            except:
+                page.open(aviso_renda)
+                page.update()
 
 
         
