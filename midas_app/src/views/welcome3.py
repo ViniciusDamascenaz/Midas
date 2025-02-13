@@ -1,5 +1,4 @@
 from flet import *
-import json
 from system import dados
 
 def welcome_page3(page: Page):
@@ -57,7 +56,7 @@ def welcome_page3(page: Page):
                     user.adiciona_obj("ia", "True")
                 else:
                     user.adiciona_obj("ia", "False")
-                page.go("/welcome1")
+                page.go("/welcome4")
 
             except:
                 page.open(aviso_renda)
@@ -67,12 +66,12 @@ def welcome_page3(page: Page):
         
 
     return View(
-        route="/welcome1",
+        route="/welcome3",
         controls=[
             Stack([
                 Container(
                     Column([
-                        ProgressBar(0.4,bar_height=20, color="#a2a6fd", height=10),
+                        ProgressBar(0.5,bar_height=20, color="#a2a6fd", height=10),
                         Container(height=page.window.height/9),
                         Row([
                             Column([

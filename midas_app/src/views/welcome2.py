@@ -1,5 +1,4 @@
 from flet import *
-import json
 from system import dados
 
 def welcome_page2(page: Page):
@@ -29,7 +28,7 @@ def welcome_page2(page: Page):
             Stack([
                 Container(
                     Column([
-                        ProgressBar(0.2,bar_height=20, color="#a2a6fd", height=10),
+                        ProgressBar(0.25,bar_height=20, color="#a2a6fd", height=10),
                         Container(height=page.window.height/9),
                         Row([
                             Column([

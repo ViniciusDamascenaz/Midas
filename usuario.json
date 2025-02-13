@@ -1,8 +1,8 @@
 {
-    "nome": "matheus",
-    "email": "vinicius",
+    "nome": "121",
+    "email": "12112",
     "objetivo": [],
-    "renda": "20000",
+    "renda": "121",
     "saldo_atual": 0.0,
     "cartoes": {},
     "gastos": {},
@@ -10,6 +10,6 @@
     "orçamento": {},
     "investimentos": {},
     "metas_financeiras": {},
-    "ia": "True",
+    "ia": "False",
     "new_user": "True"
 }

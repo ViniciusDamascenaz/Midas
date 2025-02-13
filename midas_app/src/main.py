@@ -3,6 +3,7 @@ from views import home
 from views import welcome
 from views import welcome2
 from views import welcome3
+from views import welcome4
 from system import dados
 
 
@@ -24,13 +25,15 @@ def main(page: ft.Page):
             page.views.append(welcome2.welcome_page2(page))
         elif page.route == "/welcome3":
             page.views.append(welcome3.welcome_page3(page))
+        elif page.route == "/welcome4":
+            page.views.append(welcome4.welcome_page4(page))
         
         page.update()
         
 
     page.on_route_change = route_change
     if dados.Usuario().new_user() == True:
-        page.go("/welcome3")
+        page.go("/welcome4")
     else:
         page.go("/home")
     page.update()
